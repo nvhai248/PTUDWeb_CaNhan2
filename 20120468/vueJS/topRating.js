@@ -3,7 +3,7 @@ export default {
     return {};
   },
   template: `
-    <h2>Top Rating</h2>
+    <h1>Top Rating</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 400px;">
         <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
