@@ -32,7 +32,8 @@
   background-color: white;
 }
 
-#alert, .cssForMostPopular {
+#alert,
+.grid3-3-3 {
   display: grid;
   grid-template-columns: 33% 33% 33%;
 }
@@ -48,4 +49,68 @@
 .cssForCurrentMovie {
   margin-left: 25%;
   height: 800px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.mostPopular {
+  height: 300px;
+}
+
+.cssForItem {
+  height: 300px;
+  position: relative;
+}
+
+.hoverItem:hover {
+  scale: 110%;
+}
+
+/* .endOfContent {
+  margin-bottom: 10px;
+} */
+
+.cssInformationForItem {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  background-color: black;
+  width: 100%;
+  height: 20%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0%;
+  border-radius: 5px;
+}
+
+.cssInformationForItem:hover {
+  opacity: 80%;
+}
+.cssInformationForItem h5 {
+  color: white;
+}
+
+.Home {
+  cursor: pointer;
+}
+
+.card {
+  padding: 0%;
+  margin: 7px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card img {
+  height: 90%;
+}
+
+.movie {
+  cursor: pointer;
 }

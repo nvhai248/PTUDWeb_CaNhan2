@@ -9,7 +9,7 @@ export default {
 
   methods: {
     async load() {
-      parseInt()
+      parseInt();
       const res = await fetch("https://reqres.in/api/users?page=2");
       const rs = await res.json();
 
@@ -20,7 +20,7 @@ export default {
 
   template: `
         <h1>Most Popular</h1>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 400px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 320px;">
             <div class="carousel-indicators mostPopular-button">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             </div>

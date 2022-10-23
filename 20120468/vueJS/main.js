@@ -23,7 +23,7 @@ export default {
         <voN/>
     </div>
         
-    <div class="row">
+    <div class="row" id="fullContent">
         <voC/>
     </div>
 
