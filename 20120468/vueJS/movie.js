@@ -1,6 +1,6 @@
 export default class {
   constructor(obj) {
-   // this.directorList = obj.directorList;
+    /* // this.directorList = obj.directorList;
     this.directors = obj.directors;
     this.fullTitle = obj.fullTitle;
     //this.genreList = obj.genreList;
@@ -17,6 +17,12 @@ export default class {
     //this.starList = obj.starList;
     this.stars = obj.stars;
     this.title = obj.title;
-    this.year = obj.year;
+    this.year = obj.year; */
+
+    this.id = obj.id;
+    this.first_name = obj.first_name;
+    this.last_name = obj.last_name;
+    this.email = obj.email;
+    this.avatar = obj.avatar;
   }
 }

@@ -12,14 +12,16 @@ export default {
     voTop,
   },
   template: `
+  <div class="container">
     <div class="row">
-        <voCur/>
+      <voCur/>
     </div>
     <div class="row">
-        <voMost/>
+      <voMost/>
     </div>
     <div class="row">
-        <voTop/>
+      <voTop/>
     </div>
+  </div>
       `,
 };

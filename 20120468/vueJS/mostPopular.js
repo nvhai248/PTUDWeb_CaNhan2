@@ -1,25 +1,31 @@
+import Movie from "./movie.js";
+
 export default {
   data() {
-    return {};
+    return {
+      movies: [],
+    };
   },
+
+  methods: {
+    async load() {
+      parseInt()
+      const res = await fetch("https://reqres.in/api/users?page=2");
+      const rs = await res.json();
+
+      this.movies = rs.data.map((obj) => new Movie(obj));
+      console.log(this.movies);
+    },
+  },
+
   template: `
         <h1>Most Popular</h1>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 400px;">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators mostPopular-button">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
+            <div class="carousel-inner mostPopular">
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="left: -5%;">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

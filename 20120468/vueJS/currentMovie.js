@@ -9,10 +9,13 @@ export default {
 
   methods: {
     async load() {
-      const res = await fetch(
-        "https://imdb-api.com/en/API/InTheaters/k_b6v1rgho"
-      );
+      const res = await fetch("https://reqres.in/api/users?page=2");
       const rs = await res.json();
+
+      for (var i = 0; i < 5; i++) {
+        this.movies.push(new Movie(rs.data[i]));
+      }
+      console.log(this.movies);
     },
   },
 
@@ -23,7 +26,7 @@ export default {
         data-bs-ride="false"
         style="height: 800px; margin-top: 10px"
         >
-        <div class="carousel-indicators">
+        <div class="carousel-indicators currentMovie-button">
         <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
@@ -32,45 +35,17 @@ export default {
             aria-current="true"
             aria-label="Slide 1"
         ></button>
-        <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-        ></button>
-        <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-        ></button>
-        <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-        ></button>
-        <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-        ></button>
+
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" v-for="m in movies">
-                <img :src="m.image" class="d-block w-100" :alt="m.id" />
-                <div class="carousel-caption d-none d-md-block">
-                <h5>{{m.fullTitle}}</h5>
-                </div>
-            </div>
+        <div class="carousel-inner currentMovie">
+            
         </div>
+
         <button
         class="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev"
-        @click="load"
         >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>

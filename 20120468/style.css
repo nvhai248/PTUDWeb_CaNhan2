@@ -1,47 +1,51 @@
 .container {
-    background-color: rgb(211, 209, 209);
+  background-color: rgb(211, 209, 209);
 }
 
-
 #darkMode {
-    width: 30px;
-    height: 15px;
-    appearance: none;
-    border-radius: 25%;
-    position: relative;
-    background-color: aliceblue;
-    border: 1px solid gray;
+  width: 20px;
+  height: 10px;
+  appearance: none;
+  border-radius: 30%;
+  position: relative;
+  background-color: aliceblue;
+  border: 1px solid gray;
 }
 
 #darkMode::before {
-    width: 14px;
-    height: 14px;
-    background-color: gray;
-    content: "";
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: gray;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  border-radius: 50%;
 }
 
 #darkMode:checked {
-    background-color: blue;
+  background-color: blue;
 }
 
 #darkMode:checked::before {
-    left: 50%;
-    background-color: white;
+  left: 50%;
+  background-color: white;
 }
 
-#alert {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+#alert, .cssForMostPopular {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .navbar {
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
 .bg-dark {
-    border: 1px solid white;
+  border: 1px solid white;
+}
+
+.cssForCurrentMovie {
+  margin-left: 25%;
+  height: 800px;
 }
